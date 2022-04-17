@@ -1,0 +1,153 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&family=Poppins:ital,wght@0,300;0,400;0,700;1,500&display=swap');
+
+
+* { /*Configurações globais so site*/
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { /*Background onde o degrade do fundo está*/
+    background-image: linear-gradient(to right, #1D2540, #304F8C);
+    font-family: 'Open Sans', sans-serif;
+}
+
+main { /*Bloco onde todo o conteúdo está*/
+    margin: auto;
+    padding: 10px;
+    background-color: #1D2540;
+    border-radius: 20px;
+    width: 600px;
+    box-shadow: 5px 5px 15px #092843ad;
+}
+
+p { /*Aqui fica a cor e o alinhamento do paragrafo*/
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    text-align: center;
+}
+
+h1 { /*Aqui fica a fonte, alinhamento e a cor do h1*/
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-align: justify;
+    color: #F2C438;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(109, 109, 109, 0.743);
+}
+
+h2 { /*Aqui fica a fonte, alinhamento e a cor do h2*/
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: white;
+    text-align: justify;
+    text-align: center;
+}
+
+#menu-horizontal { /*aqui fica a cor da barra o alinhamento e espaço*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    
+}
+
+.menu-item {
+    display: flex; /* AQUI DEIXA O MENU RETO */
+}
+
+.menu-item li a{
+    display: block;
+    font-size: 15px;
+    position: relative;
+}
+
+.menu-item li a::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: rgb(22, 132, 222);
+    transition: all 0.5s ease-in-out;
+    /*Posiciona a barra abaixo do item do menu*/
+    bottom: 20%;
+    left: 50%;
+    width: 0%; 
+    
+}
+
+.menu-item li a:hover::after{
+    width: 50%; /*Mostra a barra*/
+    left: 25%; /*Faz com que a animaçao comece do meio e va ate as bordas*/
+}
+
+
+
+#menu-horizontal li {
+    display: inline;
+}
+
+#menu-horizontal li a {
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    color: white;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+#menu-horizontal li a:hover {
+    color: rgb(22, 132, 222)
+    
+}
+
+h4 {
+    color: white;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+ul li {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: white;
+    text-align: justify;
+    text-align: center;
+
+}
+/* ANIMAÇÃO SUAVE DO SCROLL */
+html {
+    scroll-behavior: smooth;
+}
+/* PROPRIEDADE QUE RESOLVE O PROBLEMA DO TEXTO FICAR FORA DA DELA POR CAUSA DA PROPRIEDADE ANTERIOR*/
+:target {
+    scroll-margin-top: .8em;
+  }
+
+/* BOTÃO DE VOLTAR AO TOPO*/
+.topo {
+    bottom: 20px;
+    position: fixed;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    background: #fff
+    
+}
